@@ -402,6 +402,32 @@
         height: 28px;
         display: block;
       }
+
+      .watermark {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 50;
+        font-size: 0.75rem;
+        color: rgba(31, 23, 18, 0.2);
+        font-family: "Manrope", sans-serif;
+        font-weight: 400;
+        pointer-events: none;
+        opacity: 0.3;
+        transition: opacity 0.3s ease;
+      }
+
+      .watermark:hover {
+        opacity: 0.5;
+      }
+
+      @media (max-width: 780px) {
+        .watermark {
+          font-size: 0.65rem;
+          bottom: 0.75rem;
+          left: 0.75rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -805,5 +831,6 @@
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
       </svg>
     </a>
+    <div class="watermark">@Designed by Igor Janicki</div>
   </body>
 </html>
